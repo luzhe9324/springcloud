@@ -1,0 +1,40 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: luzhe-service-cosut
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 50
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10086/eureka/,http://127.0.0.1:10087/eureka/
+  # 将自己注册到eureka
+  instance:
+    prefer-ip-address: true
+ribbon:
+#  eureka:
+#    enable: false
+
+  ConnectTimeout: 5000
+  ReadTimeout: 50000
+
+
+feign:
+  hystrix:
+    enabled: true
+
+# Hystrix熔断处理的超时时间，自定义为5秒
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enable: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 50000
+          strategy: SEMAPHORE
+
+

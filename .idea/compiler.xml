@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="CosumerService" />
+        <module name="ProductService" />
+        <module name="EurekaService" />
+        <module name="EurekaService02" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FeignService" target="1.8" />
+      <module name="xxl-job" target="1.8" />
+      <module name="xxl-job-admin" target="1.8" />
+      <module name="xxl-job-core" target="1.8" />
+      <module name="xxl-job-executor-sample-frameless" target="1.8" />
+      <module name="xxl-job-executor-sample-frameless (1)" target="1.8" />
+      <module name="xxl-job-executor-sample-springboot" target="1.8" />
+      <module name="xxl-job-executor-sample-springboot (1)" target="1.8" />
+      <module name="xxl-job-executor-samples" target="1.8" />
+      <module name="xxl-job-executor-samples (2)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CosumerService" options="-parameters" />
+      <module name="EurekaService" options="-parameters" />
+      <module name="EurekaService02" options="-parameters" />
+      <module name="ProductService" options="-parameters" />
+    </option>
+  </component>
+</project>

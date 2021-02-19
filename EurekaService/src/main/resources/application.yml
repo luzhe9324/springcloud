@@ -1,0 +1,20 @@
+server:
+  port: 10086
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #false 不会自己注册自己
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/,http://127.0.0.1:10087/eureka/
+
+spring:
+ application:
+    name: luzhe-eureka-server
+
+# 负载均衡
+ribbon:
+  eureka:
+    enabled: true
