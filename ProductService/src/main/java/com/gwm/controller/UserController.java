@@ -76,7 +76,6 @@ public class UserController {
         }
 
 
-
     }
 
     /**
@@ -90,5 +89,8 @@ public class UserController {
         return this.userService.getUserList(user);
     }
 
+    public static void testGit(){
+        System.out.println("测试test");
+    }
 
 }
